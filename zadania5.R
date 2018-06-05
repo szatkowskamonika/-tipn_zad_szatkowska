@@ -21,7 +21,7 @@ filter(movies, Animation == 1, year < 2000 & year >=1990 ) %>%
 #zadanie 5-5
 
 filter(movies, Drama == 1) %>% 
-  arrange(movies, desc(length))
+  arrange(desc(length))
 
 #zadanie 5-6
 
