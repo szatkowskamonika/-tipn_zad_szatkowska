@@ -1,0 +1,70 @@
+---
+title: "Mutyzm wybiórczy"
+author: "Monika Szatkowska"
+date: "10 czerwca 2018"
+output: 
+  rmarkdown::html_document:
+    theme: journal
+    highlight: tango
+    df_print: paged
+---
+
+### Co to jest mutyzm wybiórczy?
+
+Mutyzm wybiórczy to zaburzenie lękowe.
+
+* Dziecko lub osoba dorosła z mutyzmem wybiórczym najczęściej **swobodnie rozmawia w domu**, ale milczy lub nie rozmawia swobodnie w przedszkolu, szkole czy w innych sytuacjach społecznych. 
+* Zaburzenie najczęściej rozpoczyna się między drugim, a piątym rokiem życia i powinno być diagnozowane już po miesiącu milczenia w danym miejscu. Niestety często jest diagnozowane dopiero w szkole podstawowej w wieku 8-12 lat.
+* Dziecko z mutyzmem wybiórczym może **w ogóle nie odzywać się do nauczycieli, rówieśników lub mówić tylko do wybranych osób.**
+* Niektóre dzieci z mutyzmem wybiórczym mają problemy z jedzeniem na terenie szkoły i korzystaniem z toalety.
+* Zazwyczaj nie mają trudności dydaktycznych, a często, w sytuacjach gdy mowa nie jest wymagana, mogą odnosić sukcesy szkolne.
+
+
+
+#### W sytuacjach stresowych dzieci z mutyzmem wybiórczym często:
+
+1. mogą mieć problem z nawiązaniem kontaktu wzrokowego
+2. nie uśmiechają się, mają „kamienną twarz”, nie zdradzającą żadnych emocji
+3. trudno jest im powiedzieć „cześć”, „do widzenia”, „dziękuję”
+4. wydaje się, że są niekulturalne, ale nie robią tego celowo
+5. czują duży niepokój, gdy są zmuszane do mówienia
+6. mogą ssać palce, obgryzać paznokcie, dotykać włosy lub gryźć rękaw bluzki
+7. mogą być nadwrażliwe na dotyk, zapach, dźwięki z otoczenia lub tłum ludzi
+8. mają niskie poczucie własnej wartości
+9. mogą być perfekcjonistami
+10. nie lubią zmian, szczególnie tych które są zaskoczeniem
+11. nie lubią być w centrum uwagi
+
+### Co jest przyczyną mutyzmu wybiórczego
+
+| Czynniki predysponujące: | Czynniki wywołujące: | Czynniki podtrzymujące: |
+|----------------------------|------------------------|------------------------|
+| zaburzenia językowe, zaburzenia mowy | separacja od rodziców, utrata bliskiej osoby i inne negatywne doświadczenia dziecka np. zgubienie się w sklepie, zostawienie pod opieką innej osoby niż rodzice | negatywne wzmacnianie mutyzmu przez zwiększoną uwagę i rozczulanie się nad dzieckiem |
+| lękliwość, nadwrażliwość dziecka | częste przeprowadzki i migracja |  brak odpowiedniej interwencji | pogodzenie się z mutyzmem dziecka i zdolność do przekazania prawie każdej informacji niewerbalnie | izolacja geograficzna lub społeczna |
+| nieśmiałość lub mutyzm występujący w rodzinie | świadomość niedoskonałości mowy | rodzina należąca do mniejszości etnicznej bądź językowej |
+| choroby psychiczne występujące w rodzinie, szczególnie zaburzenia lękowe | rozpoczęcie przedszkola lub szkoły | negatywny model komunikacji w rodzinie |
+
+#### Informacje pochodzą z książki  „The Selective Mutism Resource Manual”, 2001, Maggie Johnson & Alice Wintgens, którą można kupić [Tutaj](https://www.amazon.com/Selective-Mutism-Resource-Manual-Speechmark/dp/1909301337)
+
+
+> Milczenie spowodowane brakiem mowy nigdy nie jest złotem. Wszyscy mamy potrzebę porozumiewania się i kontaktowania ze sobą nawzajem – nie tylko jednym sposobem, lecz na wszystkie możliwe sposoby. Jest to podstawowa ludzka potrzeba, podstawowe ludzkie prawo. Co więcej, jest to podstawowa ludzka siła (Williams, 2000)
+
+#### Code chunks
+
+```{r echo = FALSE}
+library(tidyverse)
+select(mpg, year, displ) %>% arrange(desc(displ))
+```
+
+```{r echo = TRUE}
+library(tidyverse)
+group_by (mpg, trans) %>% 
+  arrange(desc(year))
+```
+
+```{r}
+library(tidyverse)
+ggplot(data = mpg) +
+geom_smooth(mapping = aes (x=cty, y=cyl))
+```
+
